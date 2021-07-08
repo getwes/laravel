@@ -13,6 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+//Route::get('/', function () {
+    //return view('welcome');
+//});
+
+Route::get('/ola', function() {
+    echo "ola mundo !!!";
 });
+
+//route é a rota get é o localhost "http"
