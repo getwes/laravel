@@ -1,10 +1,12 @@
 <?php
 namespace App\Http\Controllers;
 
+use illuminate\http\Request;
+
 class SeriesController extends Controller
 {
 
-    public function listarSeries() {
+    public function Index(Request $request) {
         $series = [
             'Grey\'s Anatomy',
             'Lost',     
