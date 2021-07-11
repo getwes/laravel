@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SeriesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,5 +18,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/series', 'seriescontroller@listarseries' ) ;
+Route::get('/series', 'App\Http\Controllers\SeriesController@listarSeries' ) ;
  

@@ -1,7 +1,7 @@
 <?php
-namespace App\Http\Controllers\seriescontroller;
+namespace App\Http\Controllers;
 
-class seriescontroller extends Controller
+class SeriesController extends Controller
 {
 
     public function listarSeries() {
