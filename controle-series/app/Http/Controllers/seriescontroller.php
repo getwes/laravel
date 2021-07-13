@@ -8,10 +8,10 @@ class SeriesController extends Controller
         $series = [
             'Grey\'s Anatomy',
             'Lost',     
-            'Agents of SHIELD'
+            'Agents of SHIELD' 
         ];
-
-     return view (view: 'series.index' , [
+       // return view ('series.index', compact('series'));
+     return view ( 'series.index' , [
     'series'=> $series
      ]);
     }
