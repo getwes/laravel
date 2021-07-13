@@ -5,14 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>controle de series</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
 <body>
-    <ul>
-    <?php foreach ($series as $serie): ?>
-    <li><?= $serie; ?></li>
-    <?php endforeach; ?>
-    </ul>
+    <div class="container">
+         <ul class="list-group">
+             <?php foreach ($series as $serie): ?>
+             <li class="list-group-intem"><?= $serie; ?></li>
+             <?php endforeach; ?>
+         </ul>
+    </div>
 </body>
 </body>
 </html>
