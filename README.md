@@ -9,3 +9,5 @@ Através da linha de comando, dentro da pasta do seu projeto, suba o servidor e 
 para abrir servidor
 
 php artisan serve
+
+tem que configurar o database
