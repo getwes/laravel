@@ -22,3 +22,4 @@ Route::get('/series', 'App\Http\Controllers\SeriesController@Index' ) ;
  
 Route::get('/series/criar', 'App\Http\Controllers\SeriesController@create' ) ;
  
+route::post('/series/criar', 'seriescontroller@store');

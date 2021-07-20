@@ -20,6 +20,14 @@ class SeriesController extends Controller
         return view('series.create');
     }
 
+    public function store(request $request)
+    {
+        $nome = $request->nome;
+
+        var_dump ($nome);
+
+    }
+
     
 }
 ?>

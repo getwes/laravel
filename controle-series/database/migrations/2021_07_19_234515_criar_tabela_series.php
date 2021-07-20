@@ -6,8 +6,9 @@ use Illuminate\Support\Facades\Schema;
 
 class CriarTabelaSeries extends Migration
 {
-    /**
-     * Run the migrations.
+    /** // php artisan list
+     * //php artisan make:migration criar_tabela_series
+     * Run the migrations. //php artisan migrate
      *
      * @return void
      */
