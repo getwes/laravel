@@ -1,6 +1,10 @@
 <?php
 namespace App\Http\Controllers;
 
+
+
+use Illuminate\Http\Request;
+
 class SeriesController extends Controller
 {
 
@@ -20,11 +24,14 @@ class SeriesController extends Controller
         return view('series.create');
     }
 
-    public function store(request $request)
+    public function store(Request $request)
     {
         $nome = $request->nome;
 
-        var_dump ($nome);
+        //redirect('/home/colaboradorlista')
+        return var_dump($nome);
+
+
 
     }
 

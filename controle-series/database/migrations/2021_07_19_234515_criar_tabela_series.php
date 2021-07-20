@@ -14,10 +14,10 @@ class CriarTabelaSeries extends Migration
      */
     public function up()
     {
-        schema::create('series', function (blueprint $table){});
+        schema::create('series', function (Blueprint $table){
         $table-> string ('nome');
     });
-
+    }
     /**
      * Reverse the migrations.
      *

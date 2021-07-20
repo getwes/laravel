@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SeriesController;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,8 +19,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/series', 'App\Http\Controllers\SeriesController@Index' ) ;
+Route::get('/series', [SeriesController::class, 'Index']) ;
  
-Route::get('/series/criar', 'App\Http\Controllers\SeriesController@create' ) ;
+Route::get('/series/criar', [SeriesController::class, 'create']) ;
  
-route::post('/series/criar', 'seriescontroller@store');
+Route::post('/series/criar', [SeriesController::class, 'store']);
