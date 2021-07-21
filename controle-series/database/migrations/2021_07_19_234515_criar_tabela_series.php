@@ -16,6 +16,7 @@ class CriarTabelaSeries extends Migration
     {
         schema::create('series', function (Blueprint $table){
         $table-> string ('nome');
+        //$table->timestamps (); para mostrar quando salvar
     });
     }
     /**

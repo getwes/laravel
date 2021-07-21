@@ -29,8 +29,10 @@ class SeriesController extends Controller
         $nome = $request->nome;
 
         //redirect('/home/colaboradorlista')
-        return var_dump($nome);
-
+       // return var_dump($nome);
+     $serie = new Serie();
+     $serie->nome = $nome;
+       var_dump ($serie->save());
 
 
     }
