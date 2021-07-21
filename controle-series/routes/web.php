@@ -23,4 +23,5 @@ Route::get('/series', [SeriesController::class, 'Index']) ;
  
 Route::get('/series/criar', [SeriesController::class, 'create']) ;
  
-Route::post('/series/criar', [SeriesController::class, 'store']);
+Route::post('/series/criar', [SeriesController::class, 'store']) ;
+
