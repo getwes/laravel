@@ -11,4 +11,5 @@ class Serie extends Model
    // protected $fillable = [
      // "nome"
    // ];
+   protected $fillable = ['nome'];
 }
