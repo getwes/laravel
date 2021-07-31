@@ -6,19 +6,19 @@ use Illuminate\Support\Facades\Schema;
 
 class CriarTabelaSeries extends Migration
 {
-    /** // php artisan list
-     * //php artisan make:migration criar_tabela_series
-     * Run the migrations. //php artisan migrate
+    /**
+     * Run the migrations.
      *
      * @return void
      */
     public function up()
     {
-        schema::create('series', function (Blueprint $table){
-        $table-> string ('nome');
-        //$table->timestamps (); para mostrar quando salvar
-    });
+        Schema::create('series', function(Blueprint $table) {
+            
+            $table->string('nome');
+        });
     }
+
     /**
      * Reverse the migrations.
      *
@@ -26,6 +26,6 @@ class CriarTabelaSeries extends Migration
      */
     public function down()
     {
-        schema::drop('series');
+        Schema::drop('series');
     }
 }

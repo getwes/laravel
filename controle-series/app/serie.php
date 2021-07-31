@@ -2,13 +2,13 @@
 
 namespace app;
 
-use Illuminate\database\eloquent\Model;
+use Illuminate\Database\Eloquent\Model;
 
 class Serie extends Model 
 {
-    protected $table = 'serie';
+    //protected $table = 'serie';
     public $timestamps = false;
-    protected $fillable = [
-      "nome"
-    ];
+   // protected $fillable = [
+     // "nome"
+   // ];
 }

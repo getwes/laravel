@@ -27,15 +27,13 @@ class SeriesController extends Controller
     public function store (Request $request)
     {
         $nome = $request->nome;
-
         //redirect('/home/colaboradorlista')
        // return var_dump($nome);
-     $series = new Serie();
-     $serie-> nome = $nome;
-       var_dump ($serie->save());
+           $nome = $request->nome;
+           $serie = new Serie();
+           $serie->nome = $nome;
+           var_dump($serie->save());
+       }
 
-    }
-
-    
 }
 ?>
