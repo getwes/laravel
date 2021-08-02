@@ -9,7 +9,7 @@ class SeriesController extends Controller
 {
 
     public function Index() {
-        $series = serie::all();;
+        $series = serie::query()-> orderby('nome')->get();
        // return view ('series.index', compact('series'));
      return view ( 'series.index' , [
     'series'=> $series
@@ -32,7 +32,7 @@ class SeriesController extends Controller
 
            echo "Série com id ($serie->id) criada: ($serie->nome)";
                
-           
+           return redirect('/series');
        }
 
 }
