@@ -25,3 +25,5 @@ Route::get('/series/criar', [SeriesController::class, 'create']) ;
  
 Route::post('/series/criar', [SeriesController::class, 'store']) ;
 
+Route::delete('/series/{id}', [SeriesController::class, 'destroy']) ;
+

@@ -30,12 +30,22 @@ class SeriesController extends Controller
            //$serie->nome = $nome;
            //var_dump($serie->save());
            $serie = Serie::create($request->all());
-
+                               //put
            $request->session()->flash('mensagem',"series{$serie->id} criada com sucesso {$serie->nome}");
 
            
                
            return redirect('/series');
+       }
+
+       public function destroy(request $request){
+           Serie::destroy ($request->id);
+           $request->session()
+           ->flash(
+               'mensagem' ,"serie removida com sucesso"
+           );
+           return redirect ('/series');
+
        }
 
 }
