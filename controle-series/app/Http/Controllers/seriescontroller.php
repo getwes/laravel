@@ -20,9 +20,13 @@ class SeriesController extends Controller
 
         return view('series.create');
     }
-
-    public function store (Request $request)
+                           // SeriesFormRequest
+    public function store (seriesformrequest $request)
     {
+      //  $request->validate([
+         //   'nome' => 'required|min:'
+       // ]);
+       //********************************************************
         //redirect('/home/colaboradorlista')
        // return var_dump($nome);
            $nome = $request->nome;
@@ -35,7 +39,7 @@ class SeriesController extends Controller
 
            
                
-           return redirect('/series');
+           return redirect()->route('listar_series');
        }
 
        public function destroy(request $request){
@@ -44,7 +48,7 @@ class SeriesController extends Controller
            ->flash(
                'mensagem' ,"serie removida com sucesso"
            );
-           return redirect ('/series');
+           return redirect ()->route('listar_series');
 
        }
 
