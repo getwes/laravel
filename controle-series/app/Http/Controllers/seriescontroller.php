@@ -5,6 +5,8 @@ use App\Serie;
 
 use Illuminate\Http\Request;
 
+use App\Http\Requests\SeriesFormRequest;
+
 class SeriesController extends Controller
 {
 
