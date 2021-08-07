@@ -22,7 +22,7 @@ class SeriesController extends Controller
 
         return view('series.create');
     }
-                           // SeriesFormRequest
+                           // request
     public function store (seriesformrequest $request)
     {
       //  $request->validate([
