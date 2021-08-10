@@ -7,5 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class episodio extends Model
 {
-    use HasFactory;
+   public function temporada ()
+   {
+       return $this_>belongto(temporada::class);
+   }
 }
