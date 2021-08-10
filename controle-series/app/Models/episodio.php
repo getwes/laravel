@@ -9,6 +9,6 @@ class episodio extends Model
 {
    public function temporada ()
    {
-       return $this_>belongto(temporada::class);
+       return $this->belongto(temporada::class);
    }
 }
