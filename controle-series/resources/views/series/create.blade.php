@@ -24,7 +24,7 @@
          </div>
 
          <div class="col col-8">
-            <label for="nome">numero de temporadas</label>
+            <label for="qtd_temporadas">numero de temporadas</label>
             <input type="text" class="form-control" name="qtd_temporadas" id="nome">
         </div>
 
