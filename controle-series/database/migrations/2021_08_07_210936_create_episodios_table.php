@@ -12,9 +12,7 @@ class CreateEpisodiosTable extends Migration
      * @return void
      */
     public function up()
-    {
-        Schema::create('episodios', function (Blueprint $table) {
-            public function up()
+
             {
                 Schema::create('episodios', function (Blueprint $table) {
                     $table->bigIncrements('id');
@@ -26,8 +24,6 @@ class CreateEpisodiosTable extends Migration
                         ->on('temporadas');
                 });
             }
-        });
-    }
 
     /**
      * Reverse the migrations.
