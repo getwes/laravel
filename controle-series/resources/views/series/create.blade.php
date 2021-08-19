@@ -23,9 +23,14 @@
              <input type="text" class="form-control" name="nome" id="nome">
          </div>
 
-         <div class="col col-8">
+         <div class="col col-2">
             <label for="qtd_temporadas">numero de temporadas</label>
-            <input type="text" class="form-control" name="qtd_temporadas" id="nome">
+            <input type="number" class="form-control" name="qtd_temporadas" id="nome">
+        </div>
+        
+        <div class="col col-2">
+            <label for="qtd_temporadas">ep. por temporadas</label>
+            <input type="number" class="form-control" name="qtd_temporadas" id="nome">
         </div>
 
     </div>
