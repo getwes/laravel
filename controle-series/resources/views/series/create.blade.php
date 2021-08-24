@@ -17,9 +17,10 @@
  
     <form method="post">
         @csrf
+        <div class="row">
     <div class="form-group">
          <div class="col col-8">
-             <label for="nome">name</label>
+             <label for="nome">nome</label>
              <input type="text" class="form-control" name="nome" id="nome">
          </div>
 
@@ -29,8 +30,8 @@
         </div>
         
         <div class="col col-2">
-            <label for="qtd_temporadas">ep. por temporadas</label>
-            <input type="number" class="form-control" name="qtd_temporadas" id="qtd_temporadas">
+            <label for="ep_por_temporadas">ep. por temporadas</label>
+            <input type="number" class="form-control" name="ep_por_temporada" id="qtd_temporadas">
         </div>
 
     </div>
