@@ -32,6 +32,7 @@
             <label for="ep_por_temporada" class="">Ep. por temporada</label>
             <input type="number" class="form-control" name="ep_por_temporada" id="ep_por_temporada">
         </div>
+        ruurr
 
     </div>
     <button class="btn btn-primary mt-2">Adicionar</button>
