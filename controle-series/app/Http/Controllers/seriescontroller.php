@@ -35,7 +35,12 @@ class SeriesController extends Controller
            //$serie = new Serie();
            //$serie->nome = $nome;
            //var_dump($serie->save());
-           $serie = Serie::create($request->all());
+           $serie = Serie::create(['nome' => $request->nome]);
+           $qtdtemporadas = $request->qtd_temporadas;
+           for ($i= 1; $i <= $qtdtemporadas; $i++) {
+               $series->temporadas()->create(['numero' => $i]);
+
+           }
                                //put
            $request->session()->flash('mensagem',"series{$serie->id} criada com sucesso {$serie->nome}");
 
