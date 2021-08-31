@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class episodio extends Model
 {
+    protected $fillable = ['numero'];
+    public$timestamps = false;
    public function temporada ()
    {
        return $this->belongto(temporada::class);
