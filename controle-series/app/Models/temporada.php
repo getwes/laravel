@@ -4,20 +4,20 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\models\temporada;
 
-class temporada extends Model
+class Temporada extends Model
 {
+    public $timestamps = false;
     protected $fillable = ['numero'];
-    public$timestamps = false;
+
     public function episodios()
     {
-        return $this->hasmany(episodio::class);
+        return $this->hasMany(Episodio::class);
     }
 
-   public function series()
-{
-    return $this->belongsto(series::class);
+    public function serie()
+    {
+        return $this->belongsTo(Serie::class);
+    }
 }
- 
-}
-

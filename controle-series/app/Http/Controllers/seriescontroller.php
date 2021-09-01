@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests\SeriesFormRequest;
 
+use App\models\temporada;
+
 class SeriesController extends Controller
 {
 
@@ -35,26 +37,26 @@ class SeriesController extends Controller
            //$serie = new Serie();
            //$serie->nome = $nome;
            //var_dump($serie->save());
-           $serie = Serie::create(['nome' => $request->nome]);
-           $qtdtemporadas = $request->qtd_temporadas;
-           for ($i= 1; $i <= $qtdtemporadas; $i++) {
-               $temporada = $series->temporadas()->create(['numero' => $i]);
+    $serie = Serie::create(['nome' => $request->nome]);
+    $qtdTemporadas = $request->qtd_temporadas;
+    for ($i = 1; $i <= $qtdTemporadas; $i++) {
+        $temporada = $serie->temporadas()->create(['numero' => $i]);
 
-               for ($j = 1; $j <= $request->ep_por_temporada; $j++) {
-                    $temporada->episodios()->create(['numero'=> $j]);
+        for ($j = 1; $j <= $request->ep_por_temporada; $j++) {
+            $temporada->episodios()->create(['numero' => $j]);
+        }
+    }
+    $request->session()
+        ->flash(
+            'mensagem',
+            "Série {$serie->id} e duas temporadas e episódios criados com sucesso {$serie->nome}"
+        );
 
-               }
+    return redirect()->route('listar_series');
+}
+       
 
-           }
-                               //put
-           $request->session()->flash('mensagem',"series{$serie->id} e suas temporadas e episodios foram criadas com sucesso {$serie->nome}");
-
-           
-               
-           return redirect()->route('listar_series');
-       }
-
-       public function destroy(request $request){
+       public function destroy (request $request){
            Serie::destroy ($request->id);
            $request->session()
            ->flash(
