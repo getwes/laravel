@@ -5,7 +5,7 @@ use App\Serie;
 
 use Illuminate\Http\Request;
 
-use  App\Models\temporada;
+use App\Model\temporada;
 
 use App\Http\Requests\SeriesFormRequest;
 
@@ -27,16 +27,7 @@ class SeriesController extends Controller
                            // request
     public function store (seriesformrequest $request)
     {
-      //  $request->validate([
-         //   'nome' => 'required|min:'
-       // ]);
-       //********************************************************
-        //redirect('/home/colaboradorlista')
-       // return var_dump($nome);
-           //$nome = $request->nome;
-           //$serie = new Serie();
-           //$serie->nome = $nome;
-           //var_dump($serie->save());
+    
     $serie = Serie::create(['nome' => $request->nome]);
     $qtdTemporadas = $request->qtd_temporadas;
     for ($i = 1; $i <= $qtdTemporadas; $i++) {
