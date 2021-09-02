@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\models\temporada;
+
 
 class Temporada extends Model
 {
@@ -16,8 +16,4 @@ class Temporada extends Model
         return $this->hasMany(Episodio::class);
     }
 
-    public function serie()
-    {
-        return $this->belongsTo(Serie::class);
-    }
 }

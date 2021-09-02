@@ -5,9 +5,9 @@ use App\Serie;
 
 use Illuminate\Http\Request;
 
-use App\Http\Requests\SeriesFormRequest;
+use  App\Models\temporada;
 
-use App\models\temporada;
+use App\Http\Requests\SeriesFormRequest;
 
 class SeriesController extends Controller
 {
@@ -33,7 +33,7 @@ class SeriesController extends Controller
        //********************************************************
         //redirect('/home/colaboradorlista')
        // return var_dump($nome);
-           $nome = $request->nome;
+           //$nome = $request->nome;
            //$serie = new Serie();
            //$serie->nome = $nome;
            //var_dump($serie->save());
