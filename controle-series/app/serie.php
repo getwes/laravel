@@ -1,21 +1,19 @@
 <?php
 
-namespace app;
+namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
 class Serie extends Model 
 {
-    //protected $table = 'serie';
+    protected $table = 'series';
     public $timestamps = false;
-   // protected $fillable = [
-     // "nome"
-   // ];
-   protected $fillable = ['nome'];
+    protected $fillable = ['nome'];
+   
 
    public function temporadas ()
    {
-     return $this->hasMany(temporada::class);
+     return $this->hasMany(Temporada::class);
 
    }
 }

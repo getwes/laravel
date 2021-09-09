@@ -24,8 +24,8 @@
         </div>
 
         <div class="col col-2">
-            <label for="qtd_temporadas" class="">N° temporadas</label>
-            <input type="number" class="form-control" name="qtd_temporadas" id="qtd_temporadas">
+            <label for="qtd_Temporadas" class="">N° temporadas</label>
+            <input type="number" class="form-control" name="qtd_Temporadas" id="qtd_Temporadas">
         </div>
 
         <div class="col col-2">
