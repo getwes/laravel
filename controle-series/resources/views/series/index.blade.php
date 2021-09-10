@@ -25,7 +25,7 @@ series
                         @csrf
                         @method('delete')
                         <button class="btn btn-danger btn-sm">
-                            <i class="fas fa-trash-alt"></i></button>
+                            <i class="far fa-trash-alt"></i></button>
                     </form>
                 </li>
                  @endforeach
