@@ -27,4 +27,4 @@ Route::post('/series/criar', [SeriesController::class, 'store']) ;
 
 Route::delete('/series/{id}', [SeriesController::class, 'destroy']) ;
 
-Route::get('/series/{serieId}/temporadas', 'TemporadasControlller@index');
+Route::get('/series/{serieId}/temporadas', [TemporadasControlller::class, 'index']);
