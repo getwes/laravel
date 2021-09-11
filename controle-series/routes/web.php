@@ -2,8 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SeriesController;
-use Illuminate\Http\Request;
 use App\Http\Controllers\TemporadasController;
+ use App\Serie;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
