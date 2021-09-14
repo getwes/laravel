@@ -24,19 +24,10 @@ class SeriesController extends Controller
         return view('series.create');
     }
                            // request
-    public function store (seriesformrequest $request)
+    public function store (seriesformrequest $request, CriadorDeSerie $criadordeserie)
     {
-    
-        //dd($request);
-    $serie = Serie::create(['nome' => $request->nome]);
-    $qtdTemporadas = $request->qtd_Temporadas;
-    for ($i = 1; $i <= $qtdTemporadas; $i++) {
-        $Temporada = $serie->temporadas()->create(['numero' => $i]);
-
-        for ($j = 1; $j <= $request->ep_por_temporada; $j++) {
-            $Temporada->episodios()->create(['numero' => $j]);
-        }
-    }
+     $serie = $criadorDeSerie->criarSerie();
+   
     $request->session()
         ->flash(
             'mensagem',
