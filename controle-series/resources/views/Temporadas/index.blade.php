@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('cabecalho')
-    Temporadas
+    Temporadas de {{ $serie->nome }}
 @endsection
 
 @section('conteudo')
