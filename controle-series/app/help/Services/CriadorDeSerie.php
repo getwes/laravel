@@ -2,10 +2,13 @@
 
 namespace App\Services;
 
-class CriadorDeSerie 
+ class CriadorDeserie
 {
 
-    public function criarSerie(string $nomeserie, int $qtdTemporadas, int $epporTemporada)
+    public function criarSerie(string $nomeserie,
+    int $qtdTemporadas, 
+    int $epporTemporada
+): serie
     {   
                 //dd($request);
         $serie = Serie::create(['nome' => $nomeserie]);

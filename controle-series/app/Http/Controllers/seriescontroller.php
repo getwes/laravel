@@ -3,6 +3,8 @@ namespace App\Http\Controllers;
 
 use App\Serie;
 
+use App\help\Services\CriadorDeSerie;
+
 use Illuminate\Http\Request;
 
 
@@ -23,10 +25,13 @@ class SeriesController extends Controller
 
         return view('series.create');
     }
-                           // request
-    public function store (seriesformrequest $request, CriadorDeSerie $criadordeserie)
+                          
+    public function store (seriesformrequest $request, CriadorDeSerie $CriadorDeSerie)
     {
-     $serie = $criadorDeSerie->criarSerie();
+     $serie = $criadorDeSerie->criarSerie(
+         $request->nome, 
+     $request->qtd_temporadas, 
+     $request->ep_por_temporada);
    
     $request->session()
         ->flash(
