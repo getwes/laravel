@@ -3,7 +3,7 @@ namespace App\Http\Controllers;
 
 use App\Serie;
 
-use App\help\Services\CriadorDeSerie;
+use App\services\CriadorDeSerie;
 
 use Illuminate\Http\Request;
 
@@ -28,9 +28,9 @@ class SeriesController extends Controller
                           
     public function store (seriesformrequest $request, CriadorDeSerie $CriadorDeSerie)
     {
-     $serie = $criadorDeSerie->criarSerie(
+     $serie = $CriadorDeSerie->criarSerie(
          $request->nome, 
-     $request->qtd_temporadas, 
+     $request->qtd_Temporadas, 
      $request->ep_por_temporada);
    
     $request->session()
