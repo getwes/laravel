@@ -1,8 +1,8 @@
 <?php
 
-namespace app\Services;
+namespace App\Services;
 
-use app\Serie; 
+use App\Models\Serie;
 
 class CriadorDeSerie
 {

@@ -1,12 +1,11 @@
 <?php
 namespace App\Http\Controllers;
 
-use App\Serie;
+use App\Models\Serie;
 
 use App\services\CriadorDeSerie;
 
 use Illuminate\Http\Request;
-
 
 use App\Http\Requests\SeriesFormRequest;
 
