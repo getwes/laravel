@@ -44,7 +44,7 @@ class SeriesController extends Controller
 
        public function destroy (request $request){
            $serie = serie::find($request->id);
-           $seire->temporadas->each(function (  Temporada $temporada) {
+           $serie->temporadas->each(function (  Temporada $temporada) {
                $temporada->delete();
 
            });
