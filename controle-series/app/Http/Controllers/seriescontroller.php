@@ -42,20 +42,28 @@ class SeriesController extends Controller
 }
        
 
-       public function destroy (request $request){
-           $serie = serie::find($request->id);
-           $serie->temporadas->each(function (  Temporada $temporada) {
-               $temporada->delete();
+public function destroy(Request $request)
+{
 
-           });
-           $serie->delete();
-           $request->session()
-           ->flash(
-               'mensagem' ,"serie removida com sucesso"
-           );
-           return redirect ()->route('listar_series');
+    $serie = Serie::find($request->id);
+    $nomeSerie = $serie->nome;
+    $serie->temporadas->each(function (Temporada $temporada) {
+        $temporada->episodios()->each(function(Episodio $episodio) {
+            $episodio->delete();
+        });
+        $temporada->delete();
 
-       }
+    });
+    $serie->delete();
+
+    Serie::destroy($request->id);
+    $request->session()
+        ->flash(
+            'mensagem',
+            "Série $nomeSerie removida com sucesso"
+        );
+    return redirect()->route('listar_series');
+}
 
 }
 ?>
