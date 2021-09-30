@@ -3,6 +3,10 @@ namespace App\Http\Controllers;
 
 use App\Models\Serie;
 
+ use App\Models\Temporada;
+
+ use App\Models\Episodio;
+
 use App\services\CriadorDeSerie;
 
 use Illuminate\Http\Request;
