@@ -2,6 +2,8 @@
 
 namespace App\Services;
 
+use App\{serie, temporada, Episodio};
+
 class RemovedorDeSerie
 {
     public function removerserie(int $serieid): string
