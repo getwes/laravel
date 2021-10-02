@@ -7,6 +7,8 @@ use App\Models\Serie;
 
  use App\Models\Episodio;
 
+ use  App\Services\RemovedorDeSerie;
+
 use App\services\CriadorDeSerie;
 
 use Illuminate\Http\Request;
@@ -46,9 +48,10 @@ class SeriesController extends Controller
 }
        
 
-public function destroy(Request $request, $RemovedorDeSerie)
+public function destroy(Request $request, RemovedorDeSerie $removedorDeSerie)
 {
-  $nomeserie = $removedorDeSerie->removerserie($request->id);
+    $nomeSerie = $removedorDeSerie->removerSerie($request->id);
+
     $request->session()
         ->flash(
             'mensagem',

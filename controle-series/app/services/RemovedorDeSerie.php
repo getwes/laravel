@@ -2,7 +2,7 @@
 
 namespace App\Services;
 
-use App\{serie, temporada, Episodio};
+use App\Models\{serie, temporada, Episodio};
 
 class RemovedorDeSerie
 {
@@ -19,7 +19,7 @@ class RemovedorDeSerie
         });
         $serie->delete();
 
-        return $nomeserie;
+        return $nomeSerie;
 
     
     }
