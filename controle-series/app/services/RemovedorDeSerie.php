@@ -4,7 +4,7 @@ namespace App\Services;
 
 class RemovedorDeSerie
 {
-    public function removerserie(int $serieid)
+    public function removerserie(int $serieid): string
     {
         $serie = Serie::find($serieid);
         $nomeSerie = $serie->nome;
@@ -16,6 +16,9 @@ class RemovedorDeSerie
     
         });
         $serie->delete();
+
+        return $nomeserie;
+
     
     }
 }
