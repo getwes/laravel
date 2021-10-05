@@ -45,11 +45,17 @@ series
              </ul>
 
              <script>
-                function toggleInput(serieId) {
-                document.getElementById(`input-nome-serie-${serieId}`)
-                .removeAttribute('hidden');
-                document.getElementById(`nome-serie-${serieId}`).hidden = true;
-                }
+              function toggleInput(serieId) {
+    const nomeSerieEl = document.getElementById(`nome-serie-${serieId}`);
+    const inputSerieEl = document.getElementById(`input-nome-serie-${serieId}`);
+    if (nomeSerieEl.hasAttribute('hidden')) {
+        nomeSerieEl.removeAttribute('hidden');
+        inputSerieEl.hidden = true;
+    } else {
+        inputSerieEl.removeAttribute('hidden');
+        nomeSerieEl.hidden = true;
+    }
+}
             </script> 
 @endsection             
  
