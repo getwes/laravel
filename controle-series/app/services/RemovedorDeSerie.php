@@ -8,11 +8,11 @@ use Iluminate\Support\Facades\DB;
 
 class RemovedorDeSerie
 {
-    public function removerserie(int $serieid): string
+    public function removerserie(int $serieId): string
     {
         $nomeSerie = '';
-        DB::transaction(function ()  use ($serieid ,& $nomeSerie){
-        $serie = Serie::find($serieid);
+        DB::transaction(function ()  use ($serieId ,& $nomeSerie){
+        $serie = Serie::find($serieId);
         $nomeSerie = $serie->nome;
         $serie->temporadas->each(function (Temporada $temporada) {
             $temporada->episodios()->each(function(Episodio $episodio) {
