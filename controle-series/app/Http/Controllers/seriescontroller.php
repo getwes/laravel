@@ -9,7 +9,6 @@ use App\Models\Serie;
 
  use  App\Services\RemovedorDeSerie;
 
- use App\Services\DB;
 
 use App\services\CriadorDeSerie;
 
