@@ -43,5 +43,13 @@ series
                 </li>
                  @endforeach
              </ul>
+
+             <script>
+                function toggleInput(serieId) {
+                document.getElementById(`input-nome-serie-${serieId}`)
+                .removeAttribute('hidden');
+                document.getElementById(`nome-serie-${serieId}`).hidden = true;
+                }
+            </script> 
 @endsection             
  
