@@ -4,10 +4,13 @@ namespace App\Services;
 
 use App\Models\{serie, temporada, Episodio};
 
+use Iluminate\Support\Facades\DB;
+
 class RemovedorDeSerie
 {
     public function removerserie(int $serieid): string
     {
+        DB::transaction(); {
         $serie = Serie::find($serieid);
         $nomeSerie = $serie->nome;
         $serie->temporadas->each(function (Temporada $temporada) {
@@ -18,6 +21,7 @@ class RemovedorDeSerie
     
         });
         $serie->delete();
+    });
 
         return $nomeSerie;
 
