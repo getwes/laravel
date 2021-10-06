@@ -56,25 +56,25 @@ series
         nomeSerieEl.hidden = true;
     }
 }
-     function editarSerie(serieId) {
-         let formData = new formData();
-       const nome = document
+function editarSerie(serieId) {
+    let formData = new FormData();
+    const nome = document
         .querySelector(`#input-nome-serie-${serieId} > input`)
         .value;
-        const token = document.querySelector('input[name="_token"]').value;
-        formData.append('nome', nome);
-        formData.append('_token', token);
-    //alert(nome);
-    //enviar para uma rota
-       const url = `/series/${serieId}/editanome`;
-    //fazer uma requisição para url
-       fetch(url, {
-           body: formData,
-           method: 'POST'
-       }).then(() => {
+    const token = document
+        .querySelector(`input[name="_token"]`)
+        .value;
+    formData.append('nome', nome);
+    formData.append('_token', token);
+    const url = `/series/${serieId}/editaNome`;
+    fetch(url, {
+        method: 'POST',
+        body: formData
+    }).then(() => {
         toggleInput(serieId);
         document.getElementById(`nome-serie-${serieId}`).textContent = nome;
     });
+
 }
          </script> 
 @endsection             
