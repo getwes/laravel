@@ -57,13 +57,21 @@ series
     }
 }
      function editarSerie(serieId) {
+         let formData = new formData();
        const nome = document
         .querySelector(`#input-nome-serie-${serieId} > input`)
         .value;
+        const token = document.querySelector('input[name="_token"]').value;
+        formData.append('nome', nome);
+        formData.append('_token', token);
     //alert(nome);
     //enviar para uma rota
-    
-
+       const url = `/series/${serieId}/editanome`;
+    //fazer uma requisição para url
+       fetch(url, {
+           body: formData,
+           method: 'POST'
+       });
 }
          </script> 
 @endsection             
