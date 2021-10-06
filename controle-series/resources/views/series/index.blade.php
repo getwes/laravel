@@ -56,6 +56,15 @@ series
         nomeSerieEl.hidden = true;
     }
 }
-            </script> 
+     function editarSerie(serieId) {
+       const nome = document
+        .querySelector(`#input-nome-serie-${serieId} > input`)
+        .value;
+    //alert(nome);
+    //enviar para uma rota
+    
+
+}
+         </script> 
 @endsection             
  
