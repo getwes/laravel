@@ -60,11 +60,11 @@ public function destroy(Request $request, RemovedorDeSerie $removedorDeSerie)
         );
     return redirect()->route('listar_series');
 }
-public function editanome(Request $request)
+public function editanome($id, Request $request)
 {
      $novonome = $request->nome;
-     $serie = Serie::find($request->id);
-     $serie->nome = $novonome;
+     $serie = Serie::find($id);
+     $serie->nome = $novoNome;
      $serie->save();
 
 }
