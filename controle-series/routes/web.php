@@ -33,4 +33,4 @@ Route::POST('/series/{id}/editaNome', 'SeriesController@editaNome');
 
 Route::get('/series/{serieId}/temporadas', 'TemporadasController@index');
 
-Route::get('/temporadas/{temporada}/episodios', 'EpisodiosController@index');
+ 'Route'::get('/temporadas/{temporada}/episodios', 'EpisodiosController@index');
