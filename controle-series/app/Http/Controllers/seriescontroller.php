@@ -9,6 +9,9 @@ use App\Models\Serie;
 
  use  App\Services\RemovedorDeSerie;
 
+ use App\Http\controllers\TemporadaControllers;
+
+ use App\Http\controllers\EpisodiosControll;
 
 use App\services\CriadorDeSerie;
 

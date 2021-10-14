@@ -5,8 +5,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Http\Controllers\TemporadasController;
-
+use App\Models\Temporada;
 
 
 class EpisodiosController extends Controller
