@@ -16,5 +16,5 @@
         @endforeach
     </ul>
     <button class="btn btn-primary mt-2 mb-2">salvar</button>
-</form>
+</form> 
 @endsection
