@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 
 use App\Models\Temporada;
 
+use App\Models\episodio;
+
 
 class EpisodiosController extends Controller
 {
