@@ -34,5 +34,11 @@ class EpisodiosController extends Controller
 
         $temporada->push();
 
+        //   return redirect()->back(); para redirecionar para tela anterior
+        
+
+
+        return redirect('/temporadas/' . $temporada->id . '/episodios');
+
     }
 }
