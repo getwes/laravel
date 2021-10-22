@@ -12,12 +12,13 @@ use App\Models\episodio;
 
 class EpisodiosController extends Controller
 {
-    public function index(Temporada $temporada)
+    public function index(Temporada $temporada, Request $request)
     {
 
        return view('episodios.index', [
            'episodios' => $temporada->episodios,
-        'temporadaId' => $temporada->id
+        'temporadaId' => $temporada->id,
+        'mensagem' => $request->session()->get('mensagem')
         ]);
     }
     public function assistir(Temporada $temporada, Request $request)
@@ -33,11 +34,10 @@ class EpisodiosController extends Controller
         });
 
         $temporada->push();
+        $request->session()->flash('mensagem', 'Episodios marcado como assistidos');
+
 
         //   return redirect()->back(); para redirecionar para tela anterior
-        
-
-
         return redirect('/temporadas/' . $temporada->id . '/episodios');
 
     }
