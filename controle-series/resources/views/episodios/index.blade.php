@@ -5,11 +5,7 @@
 @endsection
 
 @section('conteudo')
-@if(!empty($mensagem))
-<div class="alert alert-success">
-    {{ $mensagem  }}
-</div>
-@endif
+@include('Mensagem', ['mensagem' => $mensagem])
     <form action="/temporadas/{{ $temporadaId }}/episodios/assistir" method="post">
         @csrf
     <ul class="list-group">
