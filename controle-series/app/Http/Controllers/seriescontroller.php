@@ -21,7 +21,10 @@ use App\Http\Requests\SeriesFormRequest;
 
 class SeriesController extends Controller
 {
-
+    //public function __construct()
+    //{
+        //$this->middleware('auth');
+    //}
     public function Index(request $request) {
         $series = serie::query()-> orderby('nome')->get();
        // return view ('series.index', compact('series'));
