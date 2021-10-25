@@ -21,6 +21,7 @@ use App\Http\Requests\SeriesFormRequest;
 
 use Illuminate\Support\Facades\Auth;
 
+
 class SeriesController extends Controller
 {
     public function __construct()

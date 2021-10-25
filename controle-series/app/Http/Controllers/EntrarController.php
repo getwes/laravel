@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Auth;
 
+
 class EntrarController extends Controller
 {
     public function index()
