@@ -19,12 +19,14 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests\SeriesFormRequest;
 
+use Illuminate\Support\Facades\Auth;
+
 class SeriesController extends Controller
 {
-    //public function __construct()
-    //{
-        //$this->middleware('auth');
-    //}
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function Index(request $request) {
         $series = serie::query()-> orderby('nome')->get();
        // return view ('series.index', compact('series'));

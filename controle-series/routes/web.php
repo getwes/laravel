@@ -41,3 +41,5 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/entrar', 'EntrarController@index');
+
+Route::post('/entrar', 'EntrarController@entrar');
