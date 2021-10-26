@@ -21,21 +21,26 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/series', [SeriesController::class, 'Index'])->name('listar_series') ;
+Route::get('/series', [SeriesController::class, 'Index'])->name('listar_series');
  
-Route::get('/series/criar', [SeriesController::class, 'create'])->name('form_criar_serie') ;
+Route::get('/series/criar', [SeriesController::class, 'create'])->name('form_criar_serie') 
+->middleware('auth');
  
-Route::post('/series/criar', [SeriesController::class, 'store']) ;
+Route::post('/series/criar', [SeriesController::class, 'store'])
+->middleware('auth') ;
 
-Route::delete('/series/{id}', [SeriesController::class, 'destroy']) ;  
+Route::delete('/series/{id}', [SeriesController::class, 'destroy'])
+->middleware('auth') ;  
 
-Route::POST('/series/{id}/editaNome', 'SeriesController@editaNome');
+Route::POST('/series/{id}/editaNome', 'SeriesController@editaNome')
+->middleware('auth');
 
 Route::get('/series/{serieId}/temporadas', 'TemporadasController@index');
 
 Route::get('/temporadas/{temporada}/episodios', 'EpisodiosController@index');
 
-Route::post('/temporadas/{temporada}/episodios/assistir', 'EpisodiosController@assistir');
+Route::post('/temporadas/{temporada}/episodios/assistir', 'EpisodiosController@assistir')
+->middleware('auth');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
