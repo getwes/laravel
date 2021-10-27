@@ -1,0 +1,4 @@
+DB_CONNECTION=sqlite
+DB_DATABASE=:memory:
+
+// para impossibilitar de fazer alguma alteração no banco.
